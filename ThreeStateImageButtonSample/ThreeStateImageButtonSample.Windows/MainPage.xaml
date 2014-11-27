@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="ThreeStateImageButtonSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ThreeStateImageButtonSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <local:ThreeStateImageButton x:Name="ThreeStateImageButtonSample" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                     Width="50" Height="50"
+                                     NormalImageUri="ms-appx:///Image/player_like.png"
+                                     PressedImageUri="ms-appx:///Image/player_like_pressed.png"
+                                     PointerOverImageUri="ms-appx:///Image/player_like_hover.png"
+                                     DisabledImageUri="ms-appx:///Image/player_like_disable.png"
+                                     SelectedImageUri="ms-appx:///Image/player_like_pressed.png"
+                                     OnThreeStateImageButtonStateChanged="ThreeStateImageButton_OnThreeStateImageButtonStateChanged"
+                                     Click="ThreeStateImageButton_Click"></local:ThreeStateImageButton>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="600" Margin="0,300,0,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Select 切換" Foreground="White" FontSize="32" HorizontalAlignment="Left"></TextBlock>
+                <ToggleSwitch x:Name="SelectedSwitch" Toggled="SelectedSwitch_Toggled" HorizontalAlignment="Left" IsOn="False"></ToggleSwitch>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Enable 切換" Foreground="White" FontSize="32" HorizontalAlignment="Left"></TextBlock>
+                <ToggleSwitch x:Name="EnableSwitch" Toggled="EnableSwitch_Toggled" HorizontalAlignment="Left" IsOn="True"></ToggleSwitch>
+            </StackPanel>
+            <TextBlock x:Name="CurrentStateTextBlock" Text="CurrentState: " Foreground="White" FontSize="32" HorizontalAlignment="Left"></TextBlock>
+            <TextBlock x:Name="ClickStateTextBlock" Text="Clicked at: " Foreground="White" FontSize="32" HorizontalAlignment="Left"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

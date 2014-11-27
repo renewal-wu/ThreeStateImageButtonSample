@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>4c10f78d-668c-49a5-a51d-96fa9d7723e7</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ThreeStateImageButtonSample</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ThreeStateImageButton\ImageLoadingMode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ThreeStateImageButton\ThreeStateImageButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ThreeStateImageButton\ThreeStateImageButtonState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Image\player_like.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Image\player_like_disable.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Image\player_like_hover.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Image\player_like_pressed.png" />
+  </ItemGroup>
+</Project>
